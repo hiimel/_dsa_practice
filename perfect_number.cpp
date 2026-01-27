@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPerfect(int n) {
+    if(n <= 1) {
+        return false;
+    }
+
+    int sum = 1;
+    for(int i = 2; i * i <= n; i++) {
+        if(n % i == 0) {
+            sum += i;
+            if(i * i != n) {
+                sum += n / i;
+            } 
+        }
+    }
+
+    if(sum == n) {
+        return true;
+    }
+
+    return false;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    if(isPerfect(n)) {
+        cout << n << " is a Perfect Number !" << endl;
+    } else {
+        cout << n << " is not Perfect Number !" << endl;
+    }
+
+    return 0;
+}
