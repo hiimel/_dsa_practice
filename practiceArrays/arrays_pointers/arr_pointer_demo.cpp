@@ -45,7 +45,7 @@ void printAllArr(int *arr, int n) {
     cout << "_print 03: ";
     for(int i = 0; i < n; i++) {
         cout << *arr << " ";
-        arr++; // here, arr++ is being done because it is a pointer copy.
+        arr++; // here, arr++ is being done because it is a pointer copy. 
     }
 
     cout << endl;
