@@ -2,17 +2,11 @@
 using namespace std;
 
 vector<int> findLeaders(vector<int> &arr, int n) {
-    if(n == 0) {
-        return {};
-    }
-
     vector<int> leaders;
     
-    // rightmost el is always leader
     int maxRight = arr[n - 1];
     leaders.push_back(maxRight);
 
-    // traverse to 2nd last el to 1st el
     for(int i = n - 2; i >= 0; i--) {
         if(arr[i] >= maxRight) {
             maxRight = arr[i];
