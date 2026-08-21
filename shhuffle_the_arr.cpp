@@ -13,10 +13,15 @@ vector<int> shuffle(vector<int>& nums, int n) {
 }
 
 int main() {
-    vector<int> nums = {2, 5, 1, 3, 4, 7};
-    int n = 3;
+    int n;
+    cin >> n;
 
-    vector<int> res = shuffle(nums, n);
+    vector<int> arr(2 * n);
+    for(int i = 0; i < 2 * n; i++) {
+        cin >> arr[i];
+    }
+
+    vector<int> res = shuffle(arr, n);
 
     for(int i = 0; i < res.size(); i++) {
         cout << res[i] << " ";
