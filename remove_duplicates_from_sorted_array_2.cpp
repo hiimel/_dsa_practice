@@ -15,7 +15,7 @@ int removeDuplicates(vector<int>& nums) {
             cnt++;
         } else {
             cnt = 1;
-        }
+        } 
 
         if(cnt <= 2) {
             nums[pos] = nums[i];
